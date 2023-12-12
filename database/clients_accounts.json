@@ -1,22 +1,19 @@
 [
 	{
-        "id":"00001",
-		"client_first_name":"Petya",
-        "client_last_name":"Nikolova",
+        "client_id":"00001",
+		"name":"Petya",
 		"pin_code":"0123",
 		"balance":550
 	},
 	{
-        "id":"00002",
-		"client_first_name":"Iliana",
-        "client_last_name":"Dimitrova",
+        "client_id":"00002",
+		"name":"Iliana",
 		"pin_code":"4567",
 		"balance":1100
 	},
 	{
-        "id":"00003",
-		"client_first_name":"Ivan",
-        "client_last_name":"Asenov",
+        "client_id":"00003",
+		"name":"Ivan",
 		"pin_code":"8900",
 		"balance":0.50
 	}
