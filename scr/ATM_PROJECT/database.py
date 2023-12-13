@@ -13,7 +13,6 @@ class DB:
             # Create an empty file if it doesn't exist
             with open(file_path, 'w') as file:
                 json.dump([], file)
-        
         try:
             with open(file_path, 'r') as file:
                 clients_data = json.load(file)
