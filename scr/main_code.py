@@ -36,12 +36,7 @@ def main():
         new_client = Clients(new_client_id,new_client_name, new_client_pin_code,new_client_balance) 
         Clients.add_client(new_client)
         print(f"Регистрацията е успешна, {new_client.name}! Добре дошли в нашата банка.")
-
-        # Save the updated client data to the JSON file
-        clients_data = DB.load_clients_from_db()
-        clients_data.append(new_client)
-        DB.save_clients_to_db(clients_data)
-
+        
     else:
         print("Невалиден избор. Програмата ще приключи.")
 
