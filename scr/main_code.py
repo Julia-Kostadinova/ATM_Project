@@ -1,10 +1,10 @@
 
 print('***** PYTHON BANK *****')
 
-from ATM_project.client_interface_messages import display_main_menu, get_user_input
-from ATM_project.account_operations import Clients
-from ATM_project.account_operations import AccountOperations
-from ATM_project.database import DB
+from ATM_project_functions.client_interface_messages import display_main_menu, get_user_input
+from ATM_project_functions.account_operations import Clients
+from ATM_project_functions.account_operations import AccountOperations
+from ATM_project_functions.database import DB
 
 def identify_client_by_id(client_id):
     clients_list = DB.load_clients_from_db()

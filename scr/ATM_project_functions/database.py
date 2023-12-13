@@ -1,7 +1,7 @@
 
 import json
 import os
-from ATM_project.account_operations import Clients
+from ATM_project_functions.account_operations import Clients
 
 class DB:
     @staticmethod
