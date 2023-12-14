@@ -1,4 +1,3 @@
-
 print('***** PYTHON BANK *****')
 
 from ATM_project_functions.client_interface_messages import display_main_menu, get_user_input, get_user_input_operation
@@ -25,14 +24,30 @@ def main():
         client_id = input("Моля, въведете своя уникален ID код: ")
         identified_client = identify_client_by_id(client_id)
 
+          
+    pin_code_input = input("Моля, въведете своя ПИН код: ")
+
+    
+    if pin_code_input == identified_client.pin_code:
+        print("ПИН кодът е валиден.")
+
         if identified_client:
             print(f"Добре дошли, {identified_client.name}!")  
             print("Моля, изберете опция: \n 1. Теглене  \n 2. Внасяне \n 3. Баланс")
     
-            get_user_input_operation()
             user_choice_operation = get_user_input_operation()
             
-
+            if user_choice_operation == 1:
+                amount = float(input("Моля, въведете сумата за теглене: "))
+                AccountOperations.withdraw(identified_client, amount)
+            elif user_choice_operation == 2:
+                amount = float(input("Моля, въведете сумата за внасяне: "))
+                AccountOperations.deposit(identified_client, amount)
+            elif user_choice_operation == 3:
+                balance = AccountOperations.check_balance(identified_client)
+                print(f"Текущ баланс: {balance}")
+            else:
+                print("Невалиден избор за операция.")
         else:
             print("Невалиден ID код. Моля, опитайте отново или регистрирайте нов акаунт.")
 
@@ -45,9 +60,6 @@ def main():
 
     else:
         print("Невалиден избор. Програмата ще приключи.")
-
-
-  
 
 if __name__ == "__main__":
     main()
