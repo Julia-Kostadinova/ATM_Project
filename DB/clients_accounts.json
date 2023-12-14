@@ -1,18 +1,18 @@
 [
 	{
-        "client_id": "1",
+        "client_id": "0001",
 		"name":"Петя",
 		"pin_code":"0123",
 		"balance":550
 	},
 	{
-        "client_id": "2",
+        "client_id": "0002",
 		"name":"Илиана",
 		"pin_code":"4567",
 		"balance":1100
 	},
 	{
-        "client_id": "3",
+        "client_id": "0003",
 		"name":"Иван",
 		"pin_code":"8900",
 		"balance":0.50

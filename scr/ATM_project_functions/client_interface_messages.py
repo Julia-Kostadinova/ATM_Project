@@ -13,4 +13,14 @@ def get_user_input(prompt="Въведете Вашия избор: "):
         except ValueError:
             print("Грешка! Моля, въведете число.")
 
-
+    
+def get_user_input_operation(prompt="Въведете Вашия избор: "):
+    while True:
+        try:
+            user_input_operation = int(input(prompt))
+            if user_input_operation in [1,2, 3]:
+                return user_input_operation
+            else:
+                print("Грешка! Изборът трябва да бъде 1,2 или 3.")
+        except ValueError:
+            print("Грешка! Моля, въведете число.")

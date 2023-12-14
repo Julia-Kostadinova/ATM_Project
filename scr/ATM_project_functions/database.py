@@ -1,7 +1,7 @@
 
 import json
 import os
-from ATM_project_functions.account_operations import Clients
+from ATM_project_functions.Clients import Clients
 
 class DB:
     @staticmethod
@@ -14,3 +14,5 @@ class DB:
         except FileNotFoundError:
             print(f"Грешка: Файлът '{file_path}' не е намерен.")
             return []
+
+
