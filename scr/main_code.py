@@ -1,8 +1,9 @@
 
 print('***** PYTHON BANK *****')
 
-from ATM_project_functions.client_interface_messages import display_main_menu, get_user_input,get_user_input_operation
+from ATM_project_functions.client_interface_messages import display_main_menu, get_user_input, get_user_input_operation
 from ATM_project_functions.account_operations import AccountOperations
+from ATM_project_functions.Clients import Clients
 from ATM_project_functions.database import DB
 
 def identify_client_by_id(client_id):
