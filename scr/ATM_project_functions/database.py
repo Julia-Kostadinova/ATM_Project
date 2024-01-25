@@ -1,18 +1,15 @@
+from pymongo import MongoClient
 
-import json
-import os
-from ATM_project_functions.Clients import Clients
+def connect_to_local_cluster():
+    connection_string = 'mongodb://localhost:27017/python_course'
+    return MongoClient(connection_string)
 
-class DB:
-    @staticmethod
-    def load_clients_from_db(file_path='C:/Users/djuli/OneDrive/Desktop/Lekcii Python 1508/Python_Projects/ATM_Project/DB/clients_accounts.json'):
-        try:
-            with open(file_path, 'r', encoding='utf-8') as file:
-                clients_data = json.load(file)
-                clients = [Clients(**client_data) for client_data in clients_data]
-            return clients
-        except FileNotFoundError:
-            print(f"Грешка: Файлът '{file_path}' не е намерен.")
-            return []
+local_client = connect_to_local_cluster()
 
+python_course_db = local_client['python_course']
+
+clients_info_collection = python_course_db['clients_info']
+
+for client_info in clients_info_collection.find():
+    print(client_info)
 
